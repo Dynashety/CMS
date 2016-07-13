@@ -1,0 +1,1633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - CMS@210.43.57.235" uuid="30a283aa-ad71-4c63-9446-cd21fe91d110">
+    <database-info product="MySQL" version="5.7.11" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="cms"/>
+      <table id="2" parent="1" name="announcement"/>
+      <table id="3" parent="1" name="basic"/>
+      <table id="4" parent="1" name="cashadvance"/>
+      <table id="5" parent="1" name="communication"/>
+      <table id="6" parent="1" name="entertainmentotherfee"/>
+      <table id="7" parent="1" name="expaccer"/>
+      <table id="8" parent="1" name="expfixer"/>
+      <table id="9" parent="1" name="feedback"/>
+      <table id="10" parent="1" name="monthly"/>
+      <table id="11" parent="1" name="organization"/>
+      <table id="12" parent="1" name="otherfee"/>
+      <table id="13" parent="1" name="permission"/>
+      <table id="14" parent="1" name="posit"/>
+      <table id="15" parent="1" name="posuser"/>
+      <table id="16" parent="1" name="role"/>
+      <table id="17" parent="1" name="roleperm"/>
+      <table id="18" parent="1" name="transportation"/>
+      <table id="19" parent="1" name="travel"/>
+      <table id="20" parent="1" name="user"/>
+      <table id="21" parent="1" name="userperm"/>
+      <table id="22" parent="1" name="userrole"/>
+      <column id="23" parent="2" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="24" parent="2" name="Title">
+        <comment>标题</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="25" parent="2" name="Author">
+        <comment>作者</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="26" parent="2" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="27" parent="2" name="Content">
+        <comment>内容</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <key id="28" parent="2" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="29" parent="3" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="30" parent="3" name="Name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="31" parent="3" name="Type">
+        <comment>类型</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="32" parent="3" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="33" parent="4" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="34" parent="4" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="35" parent="4" name="Date">
+        <comment>日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="36" parent="4" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="37" parent="4" name="Amount">
+        <comment>金额</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="38" parent="4" name="Origin">
+        <comment>出发地</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="39" parent="4" name="Destination">
+        <comment>目的地</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="40" parent="4" name="NumOfDays">
+        <comment>预计时长</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="41" parent="4" name="Peer">
+        <comment>同行人数</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="42" parent="4" name="TrafficIndex">
+        <comment>交通工具</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="43" parent="4" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="44" parent="4" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="45" parent="4" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="46" parent="4" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="47" parent="4" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="48" parent="5" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="49" parent="5" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="50" parent="5" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="51" parent="5" name="ProjectIndex">
+        <comment>项目</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="52" parent="5" name="PhaseIndex">
+        <comment>阶段</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="53" parent="5" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="54" parent="5" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="55" parent="5" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="56" parent="5" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="57" parent="5" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="58" parent="6" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="59" parent="6" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="60" parent="6" name="Date">
+        <comment>日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="61" parent="6" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="62" parent="6" name="Place">
+        <comment>地点</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="63" parent="6" name="CostIndex">
+        <comment>费用类型</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="64" parent="6" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="65" parent="6" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="66" parent="6" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="67" parent="6" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="68" parent="6" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="69" parent="7" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="70" parent="7" name="ExpIndex">
+        <comment>报销单编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="71" parent="7" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="72" parent="7" name="TypeIndex">
+        <comment>类别</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="73" parent="7" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="74" parent="8" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="75" parent="8" name="ExpIndex">
+        <comment>报销单编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="76" parent="8" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="77" parent="8" name="Fix">
+        <comment>审核</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="78" parent="8" name="TypeIndex">
+        <comment>类别</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="79" parent="8" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="80" parent="9" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="81" parent="9" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="82" parent="9" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="83" parent="9" name="Content">
+        <comment>内容</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="84" parent="9" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="85" parent="9" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="86" parent="10" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="87" parent="10" name="ExpIndex">
+        <comment>报销单编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="88" parent="10" name="Year">
+        <comment>年份</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="89" parent="10" name="Month">
+        <comment>月份</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="90" parent="10" name="Amount">
+        <comment>金额</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="91" parent="10" name="Ticket">
+        <comment>票据</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="92" parent="10" name="TypeIndex">
+        <comment>类别</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="93" parent="10" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="94" parent="11" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="95" parent="11" name="Name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="96" parent="11" name="OrgIndex">
+        <comment>组织机构编号</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="97" parent="11" name="Iden">
+        <comment>标识</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="98" parent="11" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="99" parent="12" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="100" parent="12" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="101" parent="12" name="Date">
+        <comment>日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="102" parent="12" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="103" parent="12" name="Amount">
+        <comment>金额</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="104" parent="12" name="Ticket">
+        <comment>票据</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="105" parent="12" name="CostIndex">
+        <comment>费用类型</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="106" parent="12" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="107" parent="12" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="108" parent="12" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="109" parent="12" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="110" parent="12" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="111" parent="13" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="112" parent="13" name="Name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <key id="113" parent="13" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="114" parent="14" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="115" parent="14" name="Name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="116" parent="14" name="OrgIndex">
+        <comment>组织机构编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="117" parent="14" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="118" parent="15" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="119" parent="15" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="120" parent="15" name="PosIndex">
+        <comment>职务编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="121" parent="15" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="122" parent="16" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="123" parent="16" name="Name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <key id="124" parent="16" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="125" parent="17" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="126" parent="17" name="RoleIndex">
+        <comment>角色编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="127" parent="17" name="PermIndex">
+        <comment>权限编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="128" parent="17" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="129" parent="18" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="130" parent="18" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="131" parent="18" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="132" parent="18" name="ProjectIndex">
+        <comment>项目</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="133" parent="18" name="PhaseIndex">
+        <comment>阶段</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="134" parent="18" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="135" parent="18" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="136" parent="18" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="137" parent="18" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="138" parent="18" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="139" parent="19" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="140" parent="19" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="141" parent="19" name="StartTime">
+        <comment>开始日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="142" parent="19" name="EndTime">
+        <comment>结束日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="143" parent="19" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="144" parent="19" name="Ticket">
+        <comment>票据</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="145" parent="19" name="Origin">
+        <comment>出发地</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="146" parent="19" name="Destination">
+        <comment>目的地</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="147" parent="19" name="Transportation">
+        <comment>交通费</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="148" parent="19" name="Accommodation">
+        <comment>住宿费</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="149" parent="19" name="Communication">
+        <comment>通讯费</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="150" parent="19" name="OtherFee">
+        <comment>其他费</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="151" parent="19" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="152" parent="19" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="153" parent="19" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="154" parent="19" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="155" parent="19" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="156" parent="20" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="157" parent="20" name="ID">
+        <comment>帐号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="158" parent="20" name="PW">
+        <comment>密码</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="159" parent="20" name="Name">
+        <comment>用户名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="160" parent="20" name="DeptIndex">
+        <comment>部门编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="161" parent="20" name="WorkIndex">
+        <comment>工作状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="162" parent="20" name="Induction">
+        <comment>入职日期</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="163" parent="20" name="Positive">
+        <comment>转正日期</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="164" parent="20" name="Sex">
+        <comment>性别</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="165" parent="20" name="MaritalIndex">
+        <comment>婚姻状态</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="166" parent="20" name="Birth">
+        <comment>生日</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="167" parent="20" name="Tel">
+        <comment>电话</comment>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="168" parent="20" name="Phone">
+        <comment>手机</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="169" parent="20" name="QQ">
+        <comment>圈圈</comment>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="170" parent="20" name="WX">
+        <comment>微信</comment>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="171" parent="20" name="Email">
+        <comment>邮箱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="172" parent="20" name="Postal">
+        <comment>邮编</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="173" parent="20" name="Addr">
+        <comment>地址</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="174" parent="20" name="State">
+        <comment>用户状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="175" parent="20" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="176" parent="21" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="177" parent="21" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="178" parent="21" name="PermIndex">
+        <comment>权限编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="179" parent="21" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="180" parent="22" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="181" parent="22" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="182" parent="22" name="RoleIndex">
+        <comment>角色编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="183" parent="22" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="defaultPersistenceUnit/Hibernate" uuid="92493370-fbe3-44bf-9aca-3c99b1250d8b">
+    <database-info product="MySQL" version="5.7.11" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="cms"/>
+      <table id="2" parent="1" name="announcement"/>
+      <table id="3" parent="1" name="basic"/>
+      <table id="4" parent="1" name="cashadvance"/>
+      <table id="5" parent="1" name="communication"/>
+      <table id="6" parent="1" name="entertainmentotherfee"/>
+      <table id="7" parent="1" name="expaccer"/>
+      <table id="8" parent="1" name="expfixer"/>
+      <table id="9" parent="1" name="feedback"/>
+      <table id="10" parent="1" name="monthly"/>
+      <table id="11" parent="1" name="organization"/>
+      <table id="12" parent="1" name="otherfee"/>
+      <table id="13" parent="1" name="permission"/>
+      <table id="14" parent="1" name="posit"/>
+      <table id="15" parent="1" name="posuser"/>
+      <table id="16" parent="1" name="role"/>
+      <table id="17" parent="1" name="roleperm"/>
+      <table id="18" parent="1" name="transportation"/>
+      <table id="19" parent="1" name="travel"/>
+      <table id="20" parent="1" name="user"/>
+      <table id="21" parent="1" name="userperm"/>
+      <table id="22" parent="1" name="userrole"/>
+      <column id="23" parent="2" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="24" parent="2" name="Title">
+        <comment>标题</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="25" parent="2" name="Author">
+        <comment>作者</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="26" parent="2" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="27" parent="2" name="Content">
+        <comment>内容</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <key id="28" parent="2" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="29" parent="3" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="30" parent="3" name="Name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="31" parent="3" name="Type">
+        <comment>类型</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="32" parent="3" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="33" parent="4" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="34" parent="4" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="35" parent="4" name="Date">
+        <comment>日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="36" parent="4" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="37" parent="4" name="Amount">
+        <comment>金额</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="38" parent="4" name="Origin">
+        <comment>出发地</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="39" parent="4" name="Destination">
+        <comment>目的地</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="40" parent="4" name="NumOfDays">
+        <comment>预计时长</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="41" parent="4" name="Peer">
+        <comment>同行人数</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="42" parent="4" name="TrafficIndex">
+        <comment>交通工具</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="43" parent="4" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="44" parent="4" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="45" parent="4" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="46" parent="4" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="47" parent="4" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="48" parent="5" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="49" parent="5" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="50" parent="5" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="51" parent="5" name="ProjectIndex">
+        <comment>项目</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="52" parent="5" name="PhaseIndex">
+        <comment>阶段</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="53" parent="5" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="54" parent="5" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="55" parent="5" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="56" parent="5" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="57" parent="5" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="58" parent="6" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="59" parent="6" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="60" parent="6" name="Date">
+        <comment>日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="61" parent="6" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="62" parent="6" name="Place">
+        <comment>地点</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="63" parent="6" name="CostIndex">
+        <comment>费用类型</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="64" parent="6" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="65" parent="6" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="66" parent="6" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="67" parent="6" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="68" parent="6" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="69" parent="7" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="70" parent="7" name="ExpIndex">
+        <comment>报销单编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="71" parent="7" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="72" parent="7" name="TypeIndex">
+        <comment>类别</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="73" parent="7" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="74" parent="8" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="75" parent="8" name="ExpIndex">
+        <comment>报销单编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="76" parent="8" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="77" parent="8" name="Fix">
+        <comment>审核</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="78" parent="8" name="TypeIndex">
+        <comment>类别</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="79" parent="8" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="80" parent="9" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="81" parent="9" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="82" parent="9" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="83" parent="9" name="Content">
+        <comment>内容</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(1000)</data-type>
+      </column>
+      <column id="84" parent="9" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="85" parent="9" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="86" parent="10" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="87" parent="10" name="ExpIndex">
+        <comment>报销单编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="88" parent="10" name="Year">
+        <comment>年份</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="89" parent="10" name="Month">
+        <comment>月份</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="90" parent="10" name="Amount">
+        <comment>金额</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="91" parent="10" name="Ticket">
+        <comment>票据</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="92" parent="10" name="TypeIndex">
+        <comment>类别</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="93" parent="10" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="94" parent="11" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="95" parent="11" name="Name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="96" parent="11" name="OrgIndex">
+        <comment>组织机构编号</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="97" parent="11" name="Iden">
+        <comment>标识</comment>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="98" parent="11" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="99" parent="12" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="100" parent="12" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="101" parent="12" name="Date">
+        <comment>日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="102" parent="12" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="103" parent="12" name="Amount">
+        <comment>金额</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="104" parent="12" name="Ticket">
+        <comment>票据</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="105" parent="12" name="CostIndex">
+        <comment>费用类型</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="106" parent="12" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="107" parent="12" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="108" parent="12" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="109" parent="12" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="110" parent="12" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="111" parent="13" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="112" parent="13" name="Name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <key id="113" parent="13" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="114" parent="14" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="115" parent="14" name="Name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="116" parent="14" name="OrgIndex">
+        <comment>组织机构编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="117" parent="14" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="118" parent="15" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="119" parent="15" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="120" parent="15" name="PosIndex">
+        <comment>职务编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="121" parent="15" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="122" parent="16" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="123" parent="16" name="Name">
+        <comment>名称</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <key id="124" parent="16" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="125" parent="17" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="126" parent="17" name="RoleIndex">
+        <comment>角色编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="127" parent="17" name="PermIndex">
+        <comment>权限编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="128" parent="17" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="129" parent="18" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="130" parent="18" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="131" parent="18" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="132" parent="18" name="ProjectIndex">
+        <comment>项目</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="133" parent="18" name="PhaseIndex">
+        <comment>阶段</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="134" parent="18" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="135" parent="18" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="136" parent="18" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="137" parent="18" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="138" parent="18" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="139" parent="19" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="140" parent="19" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="141" parent="19" name="StartTime">
+        <comment>开始日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="142" parent="19" name="EndTime">
+        <comment>结束日期</comment>
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="143" parent="19" name="Time">
+        <comment>时间</comment>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="144" parent="19" name="Ticket">
+        <comment>票据</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="145" parent="19" name="Origin">
+        <comment>出发地</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="146" parent="19" name="Destination">
+        <comment>目的地</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="147" parent="19" name="Transportation">
+        <comment>交通费</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="148" parent="19" name="Accommodation">
+        <comment>住宿费</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="149" parent="19" name="Communication">
+        <comment>通讯费</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="150" parent="19" name="OtherFee">
+        <comment>其他费</comment>
+        <mandatory>1</mandatory>
+        <data-type>decimal(10,2)</data-type>
+      </column>
+      <column id="151" parent="19" name="OrgIndex">
+        <comment>费用机构</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="152" parent="19" name="ArbitralIndex">
+        <comment>裁决书</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="153" parent="19" name="Note">
+        <comment>备注</comment>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="154" parent="19" name="State">
+        <comment>状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="155" parent="19" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="156" parent="20" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="157" parent="20" name="ID">
+        <comment>帐号</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="158" parent="20" name="PW">
+        <comment>密码</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="159" parent="20" name="Name">
+        <comment>用户名</comment>
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="160" parent="20" name="DeptIndex">
+        <comment>部门编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="161" parent="20" name="WorkIndex">
+        <comment>工作状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="162" parent="20" name="Induction">
+        <comment>入职日期</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="163" parent="20" name="Positive">
+        <comment>转正日期</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="164" parent="20" name="Sex">
+        <comment>性别</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <column id="165" parent="20" name="MaritalIndex">
+        <comment>婚姻状态</comment>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="166" parent="20" name="Birth">
+        <comment>生日</comment>
+        <data-type>date</data-type>
+      </column>
+      <column id="167" parent="20" name="Tel">
+        <comment>电话</comment>
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="168" parent="20" name="Phone">
+        <comment>手机</comment>
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="169" parent="20" name="QQ">
+        <comment>圈圈</comment>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="170" parent="20" name="WX">
+        <comment>微信</comment>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="171" parent="20" name="Email">
+        <comment>邮箱</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="172" parent="20" name="Postal">
+        <comment>邮编</comment>
+        <data-type>varchar(6)</data-type>
+      </column>
+      <column id="173" parent="20" name="Addr">
+        <comment>地址</comment>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="174" parent="20" name="State">
+        <comment>用户状态</comment>
+        <mandatory>1</mandatory>
+        <data-type>bit(1)</data-type>
+      </column>
+      <key id="175" parent="20" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="176" parent="21" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="177" parent="21" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="178" parent="21" name="PermIndex">
+        <comment>权限编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="179" parent="21" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+      <column id="180" parent="22" name="ZIZOIndex">
+        <comment>编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="181" parent="22" name="UserIndex">
+        <comment>用户编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="182" parent="22" name="RoleIndex">
+        <comment>角色编号</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="183" parent="22" name="PRIMARY">
+        <columns>ZIZOIndex</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
